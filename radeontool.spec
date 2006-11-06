@@ -30,12 +30,13 @@ Radeon:
 %setup -q
 
 %build
-%{__cc} %{rpmcflags} -o radeontool radeontool.c
+%{__cc} %{rpmcflags} %{rpmldflags} -o radeontool radeontool.c
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D %{name} $RPM_BUILD_ROOT%{_bindir}/%{name}
-install lightwatch.pl $RPM_BUILD_ROOT%{_bindir}
+install -d $RPM_BUILD_ROOT%{_bindir}
+install radeontool $RPM_BUILD_ROOT%{_bindir}/%{name}
+install lightwatch.pl $RPM_BUILD_ROOT%{_bindir}/%{name}-lightwatch
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,4 +44,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES
-%attr(755, root, root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/%{name}
+%attr(755,root,root) %{_bindir}/%{name}-lightwatch
