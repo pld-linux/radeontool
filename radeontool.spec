@@ -1,5 +1,5 @@
 Summary:	Utility to control some functions of ATI Radeon chips
-Summary(pl):	Narzêdzie do sterowania niektórymi funkcjami kart ATI Radeon
+Summary(pl.UTF-8):   NarzÄ™dzie do sterowania niektÃ³rymi funkcjami kart ATI Radeon
 Name:		radeontool
 Version:	1.5
 Release:	1
@@ -17,14 +17,14 @@ Utility to control some functions of ATI Radeon chips:
 - Turn on/off LCD scaling for resolution mismatch
 - Dumping registers
 
-%description -l pl
-Narzêdzie do sterowania niektórymi funkcjami kart opartych o chipset
+%description -l pl.UTF-8
+NarzÄ™dzie do sterowania niektÃ³rymi funkcjami kart opartych o chipset
 ATI Radeon:
-- W³±czanie/wy³±czanie zewnêtrznego DAC
-- W³±czanie/wy³±czanie pod¶wietlania panelu LCD
-- W³±czanie/wy³±czanie skalowania LCD przy niepasuj±cych
-  rozdzielczo¶ciach
-- Zrzucanie rejestrów
+- WÅ‚Ä…czanie/wyÅ‚Ä…czanie zewnÄ™trznego DAC
+- WÅ‚Ä…czanie/wyÅ‚Ä…czanie podÅ›wietlania panelu LCD
+- WÅ‚Ä…czanie/wyÅ‚Ä…czanie skalowania LCD przy niepasujÄ…cych
+  rozdzielczoÅ›ciach
+- Zrzucanie rejestrÃ³w
 
 %prep
 %setup -q
