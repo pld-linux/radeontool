@@ -1,5 +1,5 @@
 Summary:	Utility to control some functions of ATI Radeon chips
-Summary(pl.UTF-8):   Narzędzie do sterowania niektórymi funkcjami kart ATI Radeon
+Summary(pl.UTF-8):	Narzędzie do sterowania niektórymi funkcjami kart ATI Radeon
 Name:		radeontool
 Version:	1.5
 Release:	1
