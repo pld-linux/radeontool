@@ -1,13 +1,13 @@
 Summary:	Utility to control some functions of ATI Radeon chips
 Summary(pl.UTF-8):	Narzędzie do sterowania niektórymi funkcjami kart ATI Radeon
 Name:		radeontool
-Version:	1.5
+Version:	1.6.0
 Release:	1
 License:	BSD
 Group:		Applications/System
-Source0:	http://fdd.com/software/radeon/%{name}-%{version}.tar.gz
-# Source0-md5:	8065eebe5a2b163e43b40461bfe49a56
-#Source1: http://fdd.com/software/radeon/lightwatch2.pl
+Source0:	http://people.freedesktop.org/~airlied/radeontool/%{name}-%{version}.tar.bz2
+# Source0-md5:	a74926a6774317823b8dcc37f12efaad
+BuildRequires:	xorg-lib-libpciaccess-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -30,19 +30,19 @@ ATI Radeon:
 %setup -q
 
 %build
-%{__cc} %{rpmcflags} %{rpmldflags} -o radeontool radeontool.c
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install radeontool $RPM_BUILD_ROOT%{_bindir}/%{name}
-install lightwatch.pl $RPM_BUILD_ROOT%{_bindir}/%{name}-lightwatch
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES
+%attr(755,root,root) %{_bindir}/avivotool
 %attr(755,root,root) %{_bindir}/%{name}
-%attr(755,root,root) %{_bindir}/%{name}-lightwatch
