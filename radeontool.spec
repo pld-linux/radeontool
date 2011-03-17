@@ -1,12 +1,12 @@
 Summary:	Utility to control some functions of ATI Radeon chips
 Summary(pl.UTF-8):	Narzędzie do sterowania niektórymi funkcjami kart ATI Radeon
 Name:		radeontool
-Version:	1.6.0
+Version:	1.6.2
 Release:	1
 License:	BSD
 Group:		Applications/System
 Source0:	http://people.freedesktop.org/~airlied/radeontool/%{name}-%{version}.tar.bz2
-# Source0-md5:	a74926a6774317823b8dcc37f12efaad
+# Source0-md5:	007f1966e26e765382062ff9e6012400
 BuildRequires:	xorg-lib-libpciaccess-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
